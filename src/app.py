@@ -111,6 +111,7 @@ data_matrix = [[' ','Total Demand Charge(kW)','On-peak(kWh)','Off-peak(kWh)'],
 summary_month = ff.create_table(data_matrix, index=True)
 #Initiate the App
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP])
+server = app.server
 auth = dash_auth.BasicAuth(app, {'alto':'altotech'})
 tabs_styles = {
     'height': '44px'
