@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 from datetime import datetime,time
 import dash_auth
 
-dg = pd.read_csv(r"C:\Users\ASUS\Downloads\2023FebCSQ.csv")
+dg = pd.read_csv(r"https://raw.githubusercontent.com/Jamemetals/monthly-report/main/2023FebCSQ.csv")
 def kW_each_power_meter_month(df):
     kW = px.area(df,x='Unnamed: 0',y=["DP-CH-1 MAIN",'DP-CH-2 MAIN','DP-CH-3 MAIN','DP-CH-4 MAIN','DP-CH-5 MAIN'])
     kW.update_layout(
