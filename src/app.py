@@ -102,11 +102,11 @@ def create_box_plot_month(df):
     )
     return fig
 #make summary kW and cost table
-data_matrix = [[' ','Total Demand Charge(kW)','On-peak(kWh)','Off-peak(kWh)'],
-               ['Total','2,416.64','354172.10','201869.52'],
-               ['Rate(THB/UNIT)','132.93','4.1839','2.6037'],
-               ['FT','-','1.5492','1.5492'],
-               ['Charge (THB)','321243.96','1481820.63','525607.66']
+data_matrix = [[' ','Demand Charge(kW)','On-peak(kWh)','Off-peak(kWh)'],
+               ['Total',dg.loc[7,'Unnamed: 10'],dg.loc[8,'Unnamed: 10'],dg.loc[9,'Unnamed: 10']],
+               ['Rate(THB/UNIT)',dg.loc[7,'Unnamed: 11'],dg.loc[8,'Unnamed: 11'],dg.loc[9,'Unnamed: 11']],
+               ['FT',dg.loc[7,'Unnamed: 12'],dg.loc[8,'Unnamed: 12'],dg.loc[9,'Unnamed: 12']],
+               ['Charge (THB)',dg.loc[7,'Unnamed: 14'],dg.loc[8,'Unnamed: 14'],dg.loc[9,'Unnamed: 14']]
                ]
 summary_month = ff.create_table(data_matrix, index=True)
 #Initiate the App
